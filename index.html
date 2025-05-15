@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ai.Engineer360</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Main Navbar -->
+        <div class="colab-navbar">
+            <div class="top-row">
+                <div class="left-section">
+                    <div class="logo">
+                        <img src="https://colab.research.google.com/img/colab_favicon.ico" alt="Colab Logo">
+                    </div>
+                    <div class="filename">AROOJ FATIMA.ai</div>
+                </div>
+
+                <div class="right-section">
+                    <div class="icon-button">
+                        <span class="material-icons">refresh</span>
+                    </div>
+                    <div class="icon-button">
+                        <span class="material-icons">settings</span>
+                    </div>
+                    <div class="icon-button">
+                        <span class="material-icons">apps</span>
+                    </div>
+                    <div class="icon-button">
+                        <span class="material-icons">account_circle</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="button-row">
+                <div class="menu-button" onclick="scrollToSection('education')">Education</div>
+                <div class="menu-button" onclick="scrollToSection('experience')">Experience</div>
+                <div class="menu-button" onclick="scrollToSection('skills')">Skills</div>
+                <div class="menu-button" onclick="scrollToSection('certifications')">Certification</div>
+                <div class="menu-button" onclick="scrollToSection('projects')">Projects</div>
+            </div>
+        </div>
+
+        <!-- Subnavbar -->
+        <div class="subnavbar">
+            <div class="left-controls">
+                <div class="control-button">
+                    <span class="material-icons">search</span>
+                    <span>Commands</span>
+                </div>
+                <div class="separator"></div>
+                <div class="control-button">
+                    <span class="material-icons">add</span>
+                    <span>Code</span>
+                </div>
+                <div class="control-button">
+                    <span class="material-icons">add</span>
+                    <span>Text</span>
+                </div>
+            </div>
+
+            <div class="right-controls">
+                <div class="resource-indicator">RAM</div>
+                <div class="resource-indicator">Disk</div>
+            </div>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main-wrapper">
+            <!-- Mobile Sidebar Toggle -->
+            <button class="mobile-sidebar-toggle" onclick="toggleSidebar()">
+                <span class="material-icons">menu</span>
+            </button>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <div class="sidebar-content">
+                    <div class="icon-bar">
+                        <button class="sidebar-icon-button active" onclick="switchTab('contents')">
+                            <span class="material-icons">person</span>
+                        </button>
+                        <button class="sidebar-icon-button" onclick="switchTab('find')">
+                            <span class="material-icons">link</span>
+                        </button>
+                        <button class="sidebar-icon-button" onclick="switchTab('tools')">
+                            <span class="material-icons">build</span>
+                        </button>
+                        <button class="sidebar-icon-button" onclick="switchTab('blogs')">
+                            <span class="material-icons">article</span>
+                        </button>
+                        <button class="sidebar-icon-button" onclick="switchTab('languages')">
+                            <span class="material-icons">language</span>
+                        </button>
+                        <button class="sidebar-icon-button" onclick="switchTab('resume')">
+                            <span class="material-icons">description</span>
+                        </button>
+                    </div>
+
+                    <div class="main-content">
+                        <!-- About Me Section -->
+                        <div class="content-section active" id="contents-section">
+                            <div class="profile-pic-container">
+                                <img src="images\my-pic.jpeg" alt="Profile Picture" class="profile-pic">
+                            </div>
+                            <div class="sidebar-header">Generative Ai Engineer</div>
+                            <div class="about-me-content">
+                            I'm a Generative AI Engineer specializing in NLP and LLMs, with extensive experience building RAG systems and deploying production-ready solutions using Hugging Face and MLOps pipelines. My work focuses on developing scalable AI applications, augmented by secondary expertise in deep learning and computer vision to deliver comprehensive intelligent systems.   </div>
+                        </div>
+
+                        <!-- Social Links Section -->
+                        <div class="content-section" id="find-section">
+                            <div class="sidebar-header">Social Handles</div>
+                            <div class="social-links">
+                                <div class="social-link">
+                                    <span class="material-icons">code</span>
+                                    <a href="https://github.com/Aiengineer360" target="_blank">GitHub</a>
+                                </div>
+                                <div class="social-link">
+                                    <span class="material-icons">work</span>
+                                    <a href="https://www.linkedin.com/in/arooj-fatima-04026b255" target="_blank">LinkedIn</a>
+                                </div>
+                                <div class="social-link">
+                                    <span class="material-icons">email</span>
+                                    <a href="mailto:ai.engineer360@gmail.com">Email</a>
+                                </div>
+                                <div class="social-link">
+                                    <span class="material-icons">bar_chart</span>
+                                    <a href="https://www.kaggle.com/ai360engineer" target="_blank">Kaggle</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Resume Section -->
+                        <div class="content-section" id="resume-section">
+                            <div class="sidebar-header">Resume</div>
+                            <div class="resume-section">
+                                <div class="resume-heading">Here's my resume</div>
+                                <div class="resume-buttons">
+                                    <a href="Arooj_Resume.pdf" target="_blank" class="resume-button">View Resume</a>
+                                    <a href="Arooj_Resume.pdf" download class="resume-button">Download Resume</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Blogs Section -->
+                        <div class="content-section" id="blogs-section">
+                            <div class="sidebar-header">Blogs</div>
+                            <div class="about-me-content">
+                                Your Online Shopping assistant, blog on blend of multiagents
+                                <a href="https://www.linkedin.com/pulse/revolutionizing-e-commerce-shopsmartai-your-shopping-companion-arooj-drotf/?trackingId=juUyzCK%2F7aoqMNm33BvKgg%3D%3D" target="_blank">
+                                    ShopSmart.Ai
+                                </a>
+                            </div>
+                        </div>
+
+                        <!-- Tools Section -->
+                        <div class="content-section" id="tools-section">
+                            <div class="sidebar-header">Tools</div>
+                            <div class="about-me-content tools-section">
+                                <ul>
+                                    <li>Project Management: Jira, GitHub</li>
+                                    <li>IDE: Pycharm, GoogleColab</li>
+                                    <li>Containerization: Docker</li>
+                                    <li>OS: Windows, Linux</li>
+                                    <li>Deployment: AWS, Hugging Face</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Languages Section -->
+                        <div class="content-section" id="languages-section">
+                            <div class="sidebar-header">Languages</div>
+                            <div class="about-me-content">
+                                <div class="language-label">English</div>
+                                <div class="language-bar english-bar">
+                                    <div class="skill-circle english-circle"></div>
+                                </div>
+                                <div class="language-label">Urdu</div>
+                                <div class="language-bar urdu-bar">
+                                    <div class="skill-circle urdu-circle"></div>
+                                </div>
+                                <div class="language-label">Arabic</div>
+                                <div class="language-bar arabic-bar">
+                                    <div class="skill-circle arabic-circle"></div>
+                                </div>
+                                <div class="language-label">German</div>
+                                <div class="language-bar german-bar">
+                                    <div class="skill-circle german-circle"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Portfolio Content -->
+            <div class="portfolio-content">
+                <div class="cover-cell">
+                    <img src="images\coverpage.jpeg" alt="Professional Cover Image" loading="lazy">
+                </div>
+                <!-- Education Section -->
+                <div class="heading" id="education">Education</div>
+
+                <div class="code-cell">
+                    <span class="cell-number">[6]</span>print("Education BackGround")
+                </div>
+
+                <div class="output">Education BackGround</div>
+
+                <ol>
+                    <li>Bachelor of Science in Software Engineering (BSSE)
+                        <ul>
+                            <li>Institution: University of Management and Technology</li>
+                            <li>Duration: 2021 - 2025</li>
+                            <li>CGPA: 3.6/4.0</li>
+                        </ul>
+                    </li>
+                    <li>Fsc
+                        <ul>
+                            <li>Institution: Punjab Group of Colleges</li>
+                            <li>Duration: 2019 - 2021</li>
+                            <li>Percentage: 96%</li>
+                        </ul>
+                    </li>
+                    <li>Matriculation (Science)
+                        <ul>
+                            <li>Institution: Siqarah Girls High School</li>
+                            <li>Duration: 2017 - 2019</li>
+                            <li>Percentage: 95%</li>
+                        </ul>
+                    </li>
+                </ol>
+
+                <!-- Experience Section -->
+                <div class="heading" id="experience">Experience</div>
+
+                <div class="code-cell">
+                    <span class="cell-number">[18]</span>print("Work Experience")
+                </div>
+
+                <ul>
+                    <li>Data Scientist at Dataworld
+                        <ul>
+                            <li>Duration: January 2025 - May 2025</li>
+                        </ul>
+                    </li>
+                    <li>Artificial Intelligence Intern at GenZtechs
+                        <ul>
+                            <li>Duration: October 2024 - December 2024</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Skills Section -->
+                <div class="heading" id="skills">Skills</div>
+
+                <div class="code-cell">
+                    <span class="cell-number">[20]</span>print("My Skills Proficiency")
+                </div>
+
+                <div class="image-container">
+                    <img src="images\skills_proficiency.png" alt="Skills Proficiency Chart">
+                </div>
+
+                <!-- Certifications Section -->
+                <div class="heading" id="certifications">Certifications</div>
+
+                <div class="code-cell">
+                    <span class="cell-number">[22]</span>print("Show Certifications")
+                </div>
+
+                <ul>
+                    <li><a href="images\certifications\GenAi.png" target="_blank">Generative AI</a>
+                        <ul>
+                            <li>Institute: Kaggle</li>
+                        </ul>
+                    </li>
+                    <li><a href="images\certifications\DataScience.jpeg" target="_blank">Data Science</a>
+                        <ul>
+                            <li>Institute: Udemy</li>
+                        </ul>
+                    </li>
+                    <li><a href="images\certifications\python.jpeg" target="_blank">Python Developer</a>
+                        <ul>
+                            <li>Institute: SoloLearn & PFTP</li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <!-- Projects Section -->
+                <div class="heading" id="projects">Projects</div>
+
+                <div class="code-cell">
+                    <span class="cell-number">[24]</span>print("Showcasing Projects - source code available on Github")
+                </div>
+
+                <div class="output">Showcasing Projects - source code available on Github</div>
+
+                <div class="project-category">GenAI:</div>
+                <ul class="project-item">
+                    <li>ShopSmart.Ai using Gemini, Whisper API, CrewAI, RAG</li>
+                    <li>End to end Medical Chatbot using Pinecone, LLM, Langchain</li>
+                </ul>
+
+                <div class="project-category">Machine Learning:</div>
+                <ul class="project-item">
+                    <li>Credit Card Spend analysis using Facebook Prophet Model</li>
+                </ul>
+
+                <div class="project-category">Django:</div>
+                <ul class="project-item">
+                    <li>Blog Website</li>
+                    <li> </li>
+                </ul>
+                 <!-- Volunteer Section -->
+                <div class="heading" id="Volunteer">Volunteer Work</div>
+
+                <div class="code-cell">
+                    <span class="cell-number">[30]</span>print("Volunteer Experience")
+                </div>
+
+                <ul>
+                    <li>
+                        <strong>Peer Tutoring at UMT(Student Success Initiative department</strong>
+                        <ul><a href="images\certifications\peer-tutor.jpg" target="_blank">Certificate</a></ul>
+                    </li>
+                    <li>
+                        <strong>Member of VLG (Volunteer Leading Governence)</strong>
+                    </li>
+                </ul>
+
+                <!-- Hobbies and Interest Section -->
+                <div class="heading" id="Hobbies and Interest">Hobbies and Interests</div>
+
+                <div class="code-cell">
+                    <span class="cell-number">[30]</span>print("In correspondence to tech craze have interest in Martial Arts")
+                </div>
+
+                <ul>
+                    <li><a href="images\certifications\Karate Certificate.pdf" target="_blank">Karate Certificate</a>
+                        <ul>
+                            <li>Institute: Police Training College</li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- Footer -->
+        <div class="footer">
+            Developed By: Arooj Fatima
+        </div>
+    </div>
+
+    <script>
+    let sidebarOpen = false;
+
+    function toggleSidebar() {
+        const sidebar = document.querySelector('.sidebar');
+        sidebarOpen = !sidebarOpen;
+        sidebar.classList.toggle('active', sidebarOpen);
+
+        // On mobile, toggle portfolio content visibility
+        if (window.innerWidth <= 600) {
+            document.querySelector('.portfolio-content').classList.toggle('hidden', sidebarOpen);
+        }
+
+        // Always show "About Me" section when opening sidebar
+        if (sidebarOpen) {
+            switchTab('contents');
+        }
+    }
+
+    function switchTab(tabName) {
+        const sections = document.querySelectorAll('.content-section');
+        const buttons = document.querySelectorAll('.sidebar-icon-button');
+
+        sections.forEach(section => section.classList.remove('active'));
+        buttons.forEach(button => button.classList.remove('active'));
+
+        document.getElementById(`${tabName}-section`).classList.add('active');
+        document.querySelector(`.sidebar-icon-button[onclick="switchTab('${tabName}')"]`).classList.add('active');
+    }
+
+    function scrollToSection(sectionId) {
+        // Ensure portfolio content is visible before scrolling
+        document.querySelector('.portfolio-content').classList.remove('hidden');
+
+        // Close sidebar if open on mobile
+        if (window.innerWidth <= 600) {
+            const sidebar = document.querySelector('.sidebar');
+            sidebar.classList.remove('active');
+            sidebarOpen = false;
+        }
+
+        const section = document.getElementById(sectionId);
+        if (section) {
+            section.scrollIntoView({ behavior: 'smooth' });
+        }
+    }
+
+    document.addEventListener('click', function(event) {
+        if (window.innerWidth <= 600 && sidebarOpen) {
+            const sidebar = document.querySelector('.sidebar');
+            const toggleButton = document.querySelector('.mobile-sidebar-toggle');
+
+            if (!sidebar.contains(event.target) && event.target !== toggleButton) {
+                toggleSidebar();
+            }
+        }
+    });
+
+    // Initialize with main content visible
+    document.querySelector('.portfolio-content').classList.remove('hidden');
+</script>
+</body>
+</html>
