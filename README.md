@@ -2,7 +2,7 @@
 
 Welcome to my unique AI Engineer portfolio, designed to look like a Google Colab notebook! This interactive showcase highlights my skills, projects, and experience in an innovative format that reflects my passion for AI and creative coding.
 
-![image](https://github.com/user-attachments/assets/9db80ce7-8cec-4d0d-a477-5dc1ef613800)
+![image](https://github.com/user-attachments/assets/1edbe0a7-4caf-4b41-9032-29f3642c2fb2)
 
 
 ## 🌟 Features
